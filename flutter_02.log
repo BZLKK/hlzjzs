@@ -1,0 +1,88 @@
+Flutter crash report.
+Please report a bug at https://github.com/flutter/flutter/issues.
+
+## command
+
+flutter build windows --debug
+
+## exception
+
+PathExistsException: PathExistsException: Cannot create link, path = 'D:\zjzs\windows\flutter\ephemeral\.plugin_symlinks\file_picker' (OS Error: 当文件已存在时，无法创建该文件。, errno = 183)
+
+```
+#0      _Link.throwIfError (dart:io/link.dart:358:7)
+#1      _Link.createSync (dart:io/link.dart:276:5)
+#2      ForwardingLink.createSync (package:file/src/forwarding/forwarding_link.dart:20:16)
+#3      ForwardingLink.createSync (package:file/src/forwarding/forwarding_link.dart:20:16)
+#4      _createPlatformPluginSymlinks (package:flutter_tools/src/flutter_plugins.dart:1143:12)
+#5      createPluginSymlinks (package:flutter_tools/src/flutter_plugins.dart:1060:5)
+#6      buildWindows (package:flutter_tools/src/windows/build_windows.dart:82:3)
+<asynchronous suspension>
+#7      BuildWindowsCommand.runCommand (package:flutter_tools/src/commands/build_windows.dart:72:5)
+<asynchronous suspension>
+#8      FlutterCommand.run.<anonymous closure> (package:flutter_tools/src/runner/flutter_command.dart:1590:27)
+<asynchronous suspension>
+#9      AppContext.run.<anonymous closure> (package:flutter_tools/src/base/context.dart:154:19)
+<asynchronous suspension>
+#10     CommandRunner.runCommand (package:args/command_runner.dart:212:13)
+<asynchronous suspension>
+#11     FlutterCommandRunner.runCommand.<anonymous closure> (package:flutter_tools/src/runner/flutter_command_runner.dart:496:9)
+<asynchronous suspension>
+#12     AppContext.run.<anonymous closure> (package:flutter_tools/src/base/context.dart:154:19)
+<asynchronous suspension>
+#13     FlutterCommandRunner.runCommand (package:flutter_tools/src/runner/flutter_command_runner.dart:431:5)
+<asynchronous suspension>
+#14     FlutterCommandRunner.run.<anonymous closure> (package:flutter_tools/src/runner/flutter_command_runner.dart:307:33)
+<asynchronous suspension>
+#15     run.<anonymous closure>.<anonymous closure> (package:flutter_tools/runner.dart:104:11)
+<asynchronous suspension>
+#16     AppContext.run.<anonymous closure> (package:flutter_tools/src/base/context.dart:154:19)
+<asynchronous suspension>
+#17     main (package:flutter_tools/executable.dart:103:3)
+<asynchronous suspension>
+```
+
+## flutter doctor
+
+```
+[32m[✓][39m Flutter (Channel stable, 3.41.6, on Microsoft Windows [版本 10.0.26100.1742], locale zh-CN) [223ms]
+    [32m•[39m Flutter version 3.41.6 on channel stable at C:\Users\Administrator\development\flutter
+    [32m•[39m Upstream repository https://github.com/flutter/flutter.git
+    [32m•[39m Framework revision db50e20168 (11 days ago), 2026-03-25 16:21:00 -0700
+    [32m•[39m Engine revision 425cfb54d0
+    [32m•[39m Dart version 3.11.4
+    [32m•[39m DevTools version 2.54.2
+    [32m•[39m Feature flags: enable-web, enable-linux-desktop, enable-macos-desktop, enable-windows-desktop, enable-android,
+      enable-ios, cli-animations, enable-native-assets, omit-legacy-version-file, enable-lldb-debugging,
+      enable-uiscene-migration
+
+[32m[✓][39m Windows Version (Windows 11 or higher, 24H2, 2009) [589ms]
+
+[32m[✓][39m Android toolchain - develop for Android devices (Android SDK version 36.1.0) [1,626ms]
+    [32m•[39m Android SDK at C:\Users\Administrator\AppData\Local\Android\sdk
+    [32m•[39m Emulator version 36.5.10.0 (build_id 15081367) (CL:N/A)
+    [32m•[39m Platform android-36.1, build-tools 36.1.0
+    [32m•[39m Java binary at: C:\Program Files\Android\Android Studio\jbr\bin\java
+      This is the JDK bundled with the latest Android Studio installation on this machine.
+      To manually set the JDK path, use: `flutter config --jdk-dir="path/to/jdk"`.
+    [32m•[39m Java version OpenJDK Runtime Environment (build 21.0.10+-14961533-b1163.108)
+    [32m•[39m All Android licenses accepted.
+
+[32m[✓][39m Chrome - develop for the web [89ms]
+    [32m•[39m Chrome at C:\Program Files\Google\Chrome\Application\chrome.exe
+
+[32m[✓][39m Visual Studio - develop Windows apps (Visual Studio 生成工具 2026 18.4.3) [88ms]
+    [32m•[39m Visual Studio at C:\Program Files (x86)\Microsoft Visual Studio\18\BuildTools
+    [32m•[39m Visual Studio 生成工具 2026 version 18.4.11626.88
+    [32m•[39m Windows 10 SDK version 10.0.26100.0
+
+[32m[✓][39m Connected device (3 available) [111ms]
+    [32m•[39m Windows (desktop) • windows • windows-x64    • Microsoft Windows [版本 10.0.26100.1742]
+    [32m•[39m Chrome (web)      • chrome  • web-javascript • Google Chrome 146.0.7680.178
+    [32m•[39m Edge (web)        • edge    • web-javascript • Microsoft Edge 146.0.3856.97
+
+[32m[✓][39m Network resources [781ms]
+    [32m•[39m All expected network resources are available.
+
+[32m•[39m No issues found!
+```
