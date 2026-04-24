@@ -1,6 +1,6 @@
 
 一个稳定的写作工具
-# HL Writer Assistant (洪离写作助手)
+# HL Writer Assistant (HL写作助手)
 
 HL Writer Assistant 是一款跨平台的写作辅助应用，专为创作者打造，提供专注、高效的写作环境。本项目基于 Flutter 构建。
 
